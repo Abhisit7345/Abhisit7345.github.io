@@ -1,0 +1,157 @@
+
+</html>
+    <style>
+        .my_face {
+          width: 100%;
+          border-radius: 50%;
+        }
+
+        .nav-size {
+          width:30px;
+          height:30px;
+        }
+        #carouselExampleCaptions .carousel-item img {  
+          object-fit: contain;
+          object-position: center;
+          overflow: hidden;
+          height:50vh;
+        }
+
+     </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body class="container-fluid">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://www.linkedin.com/in/abhisit-anupapphan-32879b23a/"><img class='nav-size my-auto' src="images/linkin.jpg" alt=""></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><img class='nav-size my-auto' src="images/instragram.jpg" alt=""></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://www.youtube.com/watch?v=xvFZjo5PgG0"><img class="my-auto nav-size" src="images/youtube.jpg" alt=""></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  
+  <div class="card mx-auto card border-0 my-4" style="width: 18rem; margin-left:30%;">
+    <img class='my_face' src="images/myface.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-center">Abhisit</h5>
+      <p class="card-text">Hello my name is Abhisit. I am a year 2 student from IS :D</p>
+    </div>
+  </div>
+
+  <div>
+    About Me
+  </div>
+
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Hobbies
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body text-center">
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-primary" onclick="show_games()">Likes playing computer games</button>
+            </div>
+
+            <div class="col text-center">
+              <button class="btn btn-secondary" onclick="show_anime()">Watches a little bit of anime</button>
+            </div>
+            
+            
+          </div>
+
+
+          <div id="carousel_add">
+          </div>
+         
+        
+         </div>
+         </div>
+         </div>
+         </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button  onclick='play_video()' class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Places that i would like to go to
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body" id="video">
+          <iframe  width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Facts About Me 
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+          <ul>
+            <li>Got driving license but can't drive</li>
+            <li>Been staying in Singapore for 10 years</li>
+            <li>Scared of going on planes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  function play_video(){
+    let video = document.getElementById('video')
+    video = video.getElementsByTagName('iframe')[0]
+    video.setAttribute('src','https://www.youtube.com/embed/X8zLJlU_-60?autoplay=1&mute=1')
+  }
+
+  function show_games(){
+    let elem = document.getElementById('carousel_add')
+    elem.innerHTML = '<div class="text-center">Some of my favorites</div><div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"><div class="carousel-indicators">    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>  </div>  <div class="carousel-inner">    <div class="carousel-item active">      <img src="images/mhr.jpg" class="d-block w-100" alt="...">      <div class="carousel-caption d-none d-md-block">        <h5>Monster Hunter series</h5>      </div>    </div>    <div class="carousel-item">      <img src="images/lol.jpg" class="d-block w-100" alt="...">      <div class="carousel-caption d-none d-md-block">        <h5>League Of Legends</h5>      </div>    </div>    <div class="carousel-item">      <img src="images/persona4.jpg" class="d-block w-100" alt="...">      <div class="carousel-caption d-none d-md-block">        <h5>Persona4</h5>      </div>    </div>  </div>  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">    <span class="carousel-control-prev-icon" aria-hidden="true"></span>    <span class="visually-hidden">Previous</span>  </button>  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">    <span class="carousel-control-next-icon" aria-hidden="true"></span>    <span class="visually-hidden">Next</span>  </button></div>'
+  }
+
+  function show_anime(){
+    let elem = document.getElementById('carousel_add')
+    elem.innerHTML = '<div class="text-center">Some of my favorites</div><div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"><div class="carousel-indicators">    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>  </div>  <div class="carousel-inner">    <div class="carousel-item active">      <img src="images/aot.jpg" class="d-block w-100" alt="...">      <div class="carousel-caption d-none d-md-block">        <h5>Attack on Titan</h5>      </div>    </div>    <div class="carousel-item">      <img src="images/steingates.jpg" class="d-block w-100" alt="...">      <div class="carousel-caption d-none d-md-block">        <h5>Steins;Gate</h5>      </div>    </div>    <div class="carousel-item">      <img src="images/fmab.jpeg" class="d-block w-100" alt="...">      <div class="carousel-caption d-none d-md-block">        <h5>Fullmetal Alchemist: Brotherhood</h5>      </div>    </div>  </div>  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">    <span class="carousel-control-prev-icon" aria-hidden="true"></span>    <span class="visually-hidden">Previous</span>  </button>  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">    <span class="carousel-control-next-icon" aria-hidden="true"></span>    <span class="visually-hidden">Next</span>  </button></div>'
+  }
+
+  '<div>fsdfsd'
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
